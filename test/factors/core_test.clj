@@ -8,4 +8,6 @@
        (fact "two has two as prime factor"
              (prime 2) => [2])
        (fact "three has three as prime factor"
-             (prime 3) => [3]))
+             (prime 3) => [3])
+       (fact "four has two & two as prime factors"
+             (prime 4) => [2 2]))
