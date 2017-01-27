@@ -10,4 +10,6 @@
        (fact "three has three as prime factor"
              (prime 3) => [3])
        (fact "four has two & two as prime factors"
-             (prime 4) => [2 2]))
+             (prime 4) => [2 2])
+       (fact "six has two & three as prime factors"
+             (prime 6) => [2 3]))
