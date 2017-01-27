@@ -8,4 +8,4 @@
       factors
       (if (= 0 (mod int divisor))
         (recur (quot int divisor) divisor (conj factors divisor))
-        (conj factors int)))))
+        (recur int (inc divisor) factors)))))
