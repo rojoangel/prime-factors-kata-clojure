@@ -4,8 +4,8 @@
   ([int]
     (prime int []))
   ([int factors]
-   (if (> int 1)
+   (if (< int 2)
+     factors
      (if (= 0 (mod int 2))
        (prime (quot int 2) (conj factors 2))
-       (conj factors int))
-     factors)))
+       (conj factors int)))))
