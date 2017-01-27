@@ -1,9 +1,11 @@
 (ns factors.core)
 
 (defn prime [int]
-  (loop [int int factors []]
-    (if (< int 2)
+  (loop [int int
+         divisor 2
+         factors []]
+    (if (< int divisor)
       factors
-      (if (= 0 (mod int 2))
-        (recur (quot int 2) (conj factors 2))
+      (if (= 0 (mod int divisor))
+        (recur (quot int divisor) divisor (conj factors divisor))
         (conj factors int)))))
